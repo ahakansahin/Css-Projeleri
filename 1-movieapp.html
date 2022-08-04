@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieApp</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+        integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+       html{
+        scroll-behavior: smooth;
+       }
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            transition: .2s;
+        }
+
+        header {
+            background-color: #FC997C;
+            position: sticky;
+            top: 0px;
+            z-index: 1;
+         /* position: fixed;
+            top: 0px;
+            z-index: 2;
+            width: 100%; */
+        }
+
+        header>a {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
+
+        header>nav {
+            float: right;
+        }
+
+        header>nav ul {
+            display: inline-block;
+        }
+
+        header>nav ul li {
+            display: inline-block;
+        }
+
+        header>nav ul li a {
+            display: block;
+            padding: 2px 12px;
+            margin: 1px 4px;
+            color: white;
+            transition: .2s;
+        }
+
+        header>nav ul li a:hover {
+            color: #2E4C6D
+        }
+
+        header>nav ul li a:active {
+            color: white;
+        }
+
+        header>nav ul li a::before {
+            content: '\2022';
+            margin-right: 5px;
+        }
+
+        #log {
+            background-color: #2E4C6D;
+            border: 2px white solid;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        #log::before {
+            content: none;
+        }
+
+        #log:hover {
+            background-color: white;
+            border: 2px #2E4C6D solid;
+            color: #2E4C6D;
+        }
+
+        #log:hover:active {
+            background-color: #2E4C6D;
+            border: 2px white solid;
+            color: white;
+        }
+
+        #bg-1 {
+            height: 70vh;
+            width: 100%;
+            background: url(../Resimler\ ve\ Videolar/home-bg.jpeg);
+            background-position: center;
+            background-size: cover;
+            position: relative;
+        }
+        #bg-1 h1{
+            position: absolute;
+            top: 50%;
+            left:50%;
+            transform: translate(-50% , -50%);
+            font-size: 40px;
+            font-weight: 700;
+            color: white;
+            
+        }
+
+        #how-id {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        #how-id p {
+            text-align: center;
+            padding: 10px;
+        }
+
+        .col-3 {
+            width: 33%;
+            text-align: center;
+            display: inline-block;
+            padding: 40px;
+        }
+
+        #showcase h3 {
+            padding: 20px;
+        }
+
+        #showcase i {
+            color: #FC997C;
+            font-size: 3em;
+        }
+
+        #features_left {
+            background: url(../Resimler\ ve\ Videolar/home-bg.jpeg);
+            background-position: top center;
+            background-size: cover;
+        }
+
+        #features_right {
+            background-color: #edf5f7;
+            padding: 50px;
+
+        }
+
+        #features_right h2 {
+            margin: 20px 0px;
+        }
+
+        #features_right p {
+            margin: 20px 0px;
+
+        }
+
+        #features_right a {
+            display: inline-block;
+            padding: 10px;
+            margin: 10px 0px;
+            background-color: #FC997C;
+            color: white;
+            border: #FC997C solid 1px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+
+        #features_right a:hover {
+            background-color: white;
+            color: #FC997C;
+            border: #FC997C solid 1px;
+            border-radius: 8px;
+        }
+
+        .col-2 {
+            display: inline-block;
+            width: 50%;
+            height: 350px;
+            background-color: brown;
+            vertical-align: top;
+            margin: 40px auto 40px auto;
+        }
+       #member{
+        text-align: center;
+       }
+
+        .row-3{
+            display: inline-block;
+            width: 25%;
+            margin: 20px;
+            background-color: #edf5f7;
+            text-align: center;
+            padding-bottom: 20px;
+            box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+            transition: .3s;
+        }
+        .row-3:hover{
+            box-shadow: rgba(0, 0, 0, 0.6) 0px 10px 36px 0px, rgba(0, 0, 0, 0.2) 0px 0px 0px 1px;
+        }
+        #member-section h3, #member-section h4{
+            margin: 20px;
+        }
+        #member-section{
+            text-align: center;
+        }
+        .plan{
+            display: inline-block;
+            padding: 10px;
+            margin: 10px 0px;
+            background-color: #FC997C;
+            color: white;
+            border: #FC997C solid 1px;
+            border-radius: 8px;
+            transition: .3s;
+        }
+        .plan:hover{
+            background-color: white;
+            color: #FC997C;
+        }
+        .row-3 ul{
+            margin-bottom: 30px;
+            list-style-type: none;
+        }
+        
+        #member-section li {
+            text-align: center;
+            margin: 5px 0px;
+        }
+        #rc{
+            color: #FC997C;
+            background-color: white;
+            padding: 10px;
+            border-radius: 10px;
+
+        }
+        #div_rc{
+            background-color: #6094ca;
+            color: white;
+        }
+        #arrow{
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+        }
+        i{
+            font-size: 40px;
+            font-weight: 700;
+            color:#FC997C;
+            transition: .2s;
+        }
+        i:hover{
+          color:#fb6537;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="#">MovieApp</a>
+        <nav>
+            <ul>
+                <li><a href="#">Filmler</a></li>
+                <li><a href="#">Diziler</a></li>
+                <li><a href="#" id="log">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <div id="bg-1">
+                <h1>Welcome to MovieApp</h1>
+            </div>
+        </section>
+        <section>
+            <div id="how-id">
+                <h2>How it works?</h2>
+                <p>We will show you step by step how to start watching your favorite movies & tv shows starting now!</p>
+            </div>
+            <div id="showcase">
+                <div class="col-3">
+                    <i class="fa-solid fa-arrow-right-to-bracket"></i>
+                    <h3>Register</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis deserunt ex nobis. Porro,
+                        maxime consectetur!</p>
+                </div>
+                <div class="col-3">
+                    <i class="fa-brands fa-buffer"></i>
+                    <h3>Chose a Plan</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis deserunt ex nobis. Porro,
+                        maxime consectetur!</p>
+                </div>
+                <div class="col-3">
+                    <i class="fa-solid fa-face-smile"></i>
+                    <h3>Enjoy Movies</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis deserunt ex nobis. Porro,
+                        maxime consectetur!</p>
+                </div>
+            </div>
+        </section>
+        <section id="features">
+            <div id="features_left" class="col-2"></div><div id="features_right" class="col-2">
+                <h2>Watch all Movies & TV Shows once they get released!</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate aperiam deserunt quaerat?
+                    Doloremque expedita repellendus adipisci eligendi nobis illum! Perferendis ab blanditiis eius iste
+                    incidunt esse numquam asperiores hic suscipit.</p>
+                <a href="#">View Features</a>
+            </div>
+        </section>
+        <section id="member-section">
+            <p >
+            <h3 id="member">Become a Member</h3>
+            </p>
+            <div class="row-3">
+                <h3>Free</h3>
+                <h4>$0/month</h4>
+                <ul>
+                    <li>HD Available</li>
+                    <li>Unlimited Movies and TV Shows</li>
+                    <li>Watch on your Phone & Tablet</li>
+                    <li>Download and Watch Offline </li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                    </ul>
+                    <a href="#" class="plan">Chose Plan</a>
+            </div>
+            <div class="row-3" id="div_rc">
+                <h3 id="rc">Recommended</h3>
+                <h3>Basic</h3>
+                <h4>$9.99/month</h4>
+                <ul>
+                    <li>HD Available</li>
+                    <li>Unlimited Movies and TV Shows</li>
+                    <li>Watch on your Phone & Tablet</li>
+                    <li>Download and Watch Offline </li>
+                    <li>Screens you can watch</li>
+                    <li>First Month Free</li>
+                    </ul>
+                    <a href="#" class="plan">Chose Plan</a>
+            </div>
+            <div class="row-3">
+                <h3>Premium</h3>
+                <h4>$19.99/month</h4>
+                <ul>
+                <li>HD Available</li>
+                <li>Unlimited Movies and TV Shows</li>
+                <li>Watch on your Phone & Tablet</li>
+                <li>Download and Watch Offline </li>
+                <li>Screens you can watch</li>
+                <li>First Month Free</li>
+                </ul>
+                <a href="#" class="plan">Chose Plan</a>
+            </div>
+        </section>
+    </main>
+    <div id="arrow"><a href="#"><i class="fa-solid fa-circle-up"></i></a></div>
+</body>
+
+</html>
