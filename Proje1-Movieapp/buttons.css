@@ -1,0 +1,35 @@
+.btn{
+    border-radius: 8px;
+    padding: 4px 10px !important;
+    border-width:2px !important;
+    border: solid;
+    transition: 0.3s;
+}
+.btn-b{
+    background-color: #2E4C6D;
+    border-color:white;
+    color: white;
+}
+.btn-b:hover{
+    background-color: white;
+    border-color:#2E4C6D;
+    color: #2E4C6D;
+}
+.btn-b:active{
+    color: white;
+    
+}
+.btn-o{
+    background-color: #FC997C;
+    border-color:#FC997C;
+    color: white;
+}
+.btn-o:hover{
+    background-color: white;
+    border-color:#FC997C;
+    color:#FC997C;
+}
+.btn-o:active{
+    color: white;
+}
+
