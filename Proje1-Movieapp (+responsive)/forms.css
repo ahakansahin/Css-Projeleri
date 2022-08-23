@@ -1,0 +1,174 @@
+@import url("base.css");
+@import url("buttons.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;700&display=swap");
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+header {
+    background-color: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    padding: 8px;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#main-link a {
+    display: block;
+    color: var(--white);
+    padding: 0.6rem;
+    font-size: 2.5rem;
+}
+
+#main-nav>ul {
+    list-style-type: none;
+}
+
+#main-nav>ul>li {
+    display: inline-block;
+    margin: 0 1rem;
+}
+
+#main-nav>ul>li>a {
+    display: block;
+}
+
+footer {
+    top: 200px;
+    position: relative;
+    background-color: var(--blue);
+    width: 100%;
+    padding: 4rem;
+
+}
+
+footer ul {
+    list-style-type: none;
+
+}
+
+
+#footer__left li {
+    float: left;
+    display: inline-block;
+
+}
+
+#footer__right li {
+    float: right;
+    display: inline-block;
+
+}
+
+#footer__left a {
+    color: var(--white);
+    font-size: 2rem;
+    padding: 0px 10px;
+
+}
+
+.fab {
+    padding: 0px 10px;
+    font-size: 2rem;
+    margin: 0px 5px;
+    color: var(--white);
+}
+
+.fa-facebook {
+    background-color: #3B5998;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+
+.fa-facebook:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+    background-color: #55ACEE;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.fa-twitter:hover {
+    opacity: 0.7;
+}
+
+.fa-instagram {
+    background-color: #125688;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+
+.fa-instagram:hover {
+    opacity: 0.7;
+}
+
+#back-to-top {
+    position: fixed;
+    z-index: 3;
+    bottom: 2rem;
+    right: 2rem;
+    color: rgba(57, 110, 176, 0.5);
+}
+
+#back-to-top:hover {
+    color: rgba(57, 110, 176, 1);
+}
+
+.fa-chevron-circle-up {
+    font-size: 4rem;
+
+}
+
+
+.forms__container{
+    width: 40%;
+    margin: auto;
+}
+
+#forms h3 {
+    color: var(--blue);
+    font-size: 3rem;
+    text-align: center;
+    margin: 4rem auto;
+}
+
+#forms input:not([type="checkbox"],[type="submit"]){
+    margin-bottom:1.5rem ;
+    margin-top: 4px;
+    font-size: 1.7rem;
+    padding: 5px;
+    width: 100%;
+    border: 1px solid gray;
+}
+
+#forms label{
+    font-size: 1.7rem;
+    width: 100%;
+}
+
+ #forms select{
+    width: 100%;
+    margin-bottom:1.5rem ;
+    margin-top: 4px;
+    font-size: 1.7rem;
+    padding: 5px;
+ }
+
+ #forms input[type="submit"]{
+    padding: 10px;
+    margin-top: 20px;
+ }
