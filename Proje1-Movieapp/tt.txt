@@ -1,3 +1,0 @@
-mavi --> #2E4C6D
-turuncu --> #FC997C
-öne çıkar --> #396EB0
